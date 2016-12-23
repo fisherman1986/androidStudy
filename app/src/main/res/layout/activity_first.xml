@@ -33,4 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonIntentOpenThirdPara" />
+    <Button
+        android:text="Intent显示打开Third页有返回数据"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntentOpenThirdBackPara" />
 </LinearLayout>

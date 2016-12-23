@@ -17,7 +17,7 @@ public class ThirdActivity extends AppCompatActivity {
         Intent intent=getIntent();
         String data=intent.getStringExtra("extra_data");
         Log.i(TAG, "onCreate: "+data);
-        /*Button buttonIntentInternetViewConfig=(Button)findViewById(R.id.buttonIntentInternetViewConfig);
+        Button buttonIntentInternetViewConfig=(Button)findViewById(R.id.buttonIntentInternetViewConfig);
         buttonIntentInternetViewConfig.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -25,6 +25,26 @@ public class ThirdActivity extends AppCompatActivity {
                 intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
             }
-        });*/
+        });
+        Button buttonBackData=(Button)findViewById(R.id.buttonBackData);
+        buttonBackData.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent();
+                intent.putExtra("data_return","hello backdata");
+                setResult(RESULT_OK,intent);
+                //setResult(RESULT_CANCELED,intent);
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent();
+        intent.putExtra("data_return","hello backdata");
+        setResult(RESULT_OK,intent);
+        //setResult(RESULT_CANCELED,intent);
+        finish();
     }
 }
