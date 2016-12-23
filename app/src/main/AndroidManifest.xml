@@ -8,18 +8,27 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".FirstActivity"
-            android:label="@string/first_activity_name" >
+        <activity android:name=".WelcomeActivity"
+            android:label="@string/welcome_activity_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
-            android:label="@string/second_activity_name"></activity>
+
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/first_activity_name">
+
+        </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:label="@string/second_activity_name">
+            <intent-filter>
+                <action android:name="com.xdtdz.study.androidstudy.ACTION_START" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
