@@ -41,8 +41,26 @@ public class FirstActivity extends AppCompatActivity {
         Button buttonIntentInternetView=(Button)findViewById(R.id.buttonIntentInternetView);
         buttonIntentInternetView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Intent intent = new Intent("android.intent.action.VIEW");
                 intent.setData(Uri.parse("https://www.baidu.com"));
+                startActivity(intent);
+            }
+        });
+
+        Button buttonIntentOpenThird=(Button)findViewById(R.id.buttonIntentOpenThird);
+        buttonIntentOpenThird.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,ThirdActivity.class);
+                startActivity(intent);
+            }
+        });//
+
+        Button buttonIntentOpenThirdPara=(Button)findViewById(R.id.buttonIntentOpenThirdPara);
+        buttonIntentOpenThirdPara.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String data="Hello NewActivity";
+                Intent intent = new Intent(FirstActivity.this,ThirdActivity.class);
+                intent.putExtra("extra_data",data);
                 startActivity(intent);
             }
         });

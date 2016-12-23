@@ -23,4 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonIntentInternetView" />
+    <Button
+        android:text="Intent显示打开Third页无数据"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntentOpenThird" />
+    <Button
+        android:text="Intent显示打开Third页有数据"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntentOpenThirdPara" />
 </LinearLayout>
