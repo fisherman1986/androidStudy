@@ -1,7 +1,11 @@
 package com.xdtdz.study.androidstudy;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -19,5 +23,46 @@ public class FirstActivity extends AppCompatActivity {
                 Toast.makeText(FirstActivity.this, "你点击了Button1", Toast.LENGTH_SHORT).show();
             }
         });
+        Button buttonIntent1=(Button)findViewById(R.id.buttonIntent1);
+        buttonIntent1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button buttonIntent2=(Button)findViewById(R.id.buttonIntent2);
+        buttonIntent2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent("com.xdtdz.study.androidstudy.ACTION_START");
+                intent.addCategory("android.intent.category.MY_CATEGORY");
+                startActivity(intent);
+            }
+        });
+        Button buttonIntentInternetView=(Button)findViewById(R.id.buttonIntentInternetView);
+        buttonIntentInternetView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.baidu.com"));
+                startActivity(intent);
+            }
+        });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main,menu);
+        return true;
+        //return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.iteml_add:
+                Toast.makeText(this,"你点击了ADD",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.iteml_remove:
+                Toast.makeText(this,"你点击了Remove",Toast.LENGTH_SHORT).show();
+                break;
+            default:break;
+        }
+        return true;
     }
 }

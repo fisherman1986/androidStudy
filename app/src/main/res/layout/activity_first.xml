@@ -4,8 +4,23 @@
     android:layout_height="match_parent">
 
     <Button
-        android:text="Button"
+        android:text="Toast消息按钮"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1" />
+    <Button
+        android:text="Intent显示"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntent1" />
+    <Button
+        android:text="Intent隐示"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntent2" />
+    <Button
+        android:text="Intent打开浏览器"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonIntentInternetView" />
 </LinearLayout>

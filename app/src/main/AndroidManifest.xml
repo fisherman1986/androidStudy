@@ -27,6 +27,8 @@
             android:label="@string/second_activity_name">
             <intent-filter>
                 <action android:name="com.xdtdz.study.androidstudy.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MY_CATEGORY"/>
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
