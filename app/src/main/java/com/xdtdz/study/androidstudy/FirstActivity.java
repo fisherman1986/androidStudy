@@ -72,6 +72,14 @@ public class FirstActivity extends AppCompatActivity {
                startActivityForResult(intent,1);
             }
         });
+
+        Button buttonDialog=(Button)findViewById(R.id.buttonDialog);
+        buttonDialog.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
